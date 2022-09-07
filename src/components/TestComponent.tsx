@@ -1,6 +1,6 @@
-import { FC } from "react"
+import { FC } from 'react';
 const TestComponent: FC = () => {
   return <div>TestComponent</div>;
 };
 
-export default TestComponent
+export default TestComponent;
