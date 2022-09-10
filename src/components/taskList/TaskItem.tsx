@@ -1,4 +1,4 @@
-import {Task} from "./Types"
+import {Task} from "../Types"
 interface Props{
   task: Task
   handleDone: (task: Task) => void

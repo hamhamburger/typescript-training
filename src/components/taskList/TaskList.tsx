@@ -1,6 +1,6 @@
 import React from 'react'
 import TaskItem from './TaskItem'
-import { Task } from './Types'
+import { Task } from '../Types'
 interface Props{
   tasks: Task[]
   setTasks: React.Dispatch<React.SetStateAction<Task[]>>

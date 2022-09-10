@@ -1,4 +1,4 @@
-import { Task } from "./Types"
+import { Task } from "../Types"
 import React, { useState } from "react"
 
 interface Props{
