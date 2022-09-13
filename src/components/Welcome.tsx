@@ -14,6 +14,7 @@ const Welcome = ():JSX.Element => {
         <li><Link to={"task"}>みんな大好きタスクリスト</Link></li>
         <li><Link to={"counter"}>カウンター</Link></li>
         <li><Link to={"notification"}>useReducerを学んだ時のやつ</Link></li>
+        <li><Link to={"form"}>react hooksのテスト</Link></li>
       </ul>
     </div>
   )
