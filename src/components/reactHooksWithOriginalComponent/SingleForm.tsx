@@ -1,5 +1,5 @@
 import {SubmitHandler, UnpackNestedValue, useForm} from "react-hook-form";
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import FruitNameField from "./FruitNameField";
 
 type FormInput = {
@@ -24,6 +24,7 @@ const SingleForm = (): JSX.Element => {
 
   const onSubmit: SubmitHandler<FormInput> = (data) => {
     printWithData(data)
+    printByGetValues()
   }
 
   return (

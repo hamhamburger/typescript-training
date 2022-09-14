@@ -1,4 +1,4 @@
-import { FormHelperText, TextareaAutosize, TextareaAutosizeProps } from '@mui/material'
+import { FormHelperText, TextareaAutosize} from '@mui/material'
 import type { ChangeEventHandler, FocusEventHandler } from "react"
 
 export type MyTextAreaProps = {

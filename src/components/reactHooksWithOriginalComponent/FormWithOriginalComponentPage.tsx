@@ -7,9 +7,9 @@ const FormWithOriginalComponentPage = ():JSX.Element => {
   
   return (
     <div>
-      <p>MUIコンポーネント</p>
+      <p>rhf v7+MUI v5でコンポーネントで作ったフォーム</p>
       <SingleForm />
-      <p>オリジナルコンポーネント</p>
+      <p>オリジナルのinputコンポーネントで作ったフォーム</p>
       <FormWithOriginalComponent />
     </div>
   )
