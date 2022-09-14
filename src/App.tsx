@@ -6,6 +6,7 @@ import Counter from './components/useReducer/Counter';
 import NotificationUseReducerPage from './components/useReducer/NotificationUseReducerPage';
 import Welcome from './components/Welcome';
 import FormPage from './components/reactHooks/FormPage';
+import FormWithOriginalComponentPage from './components/reactHooksWithOriginalComponent/FormWithOriginalComponentPage';
 
 const App:FC = () => {
 
@@ -17,6 +18,7 @@ const App:FC = () => {
         <Route path="/counter" element={<Counter />} />
         <Route path="/notification" element={<NotificationUseReducerPage />} />
         <Route path="/form" element={<FormPage />} />
+        <Route path="/form_component" element={<FormWithOriginalComponentPage />} />
       </Routes>
     </BrowserRouter>
   );
