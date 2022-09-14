@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-
+import { Box } from '@mui/material'
 import { GitData } from './types'
 import GitActionsTable from './gitActionsTable'
 
@@ -15,7 +15,6 @@ const jsonToGitData = (
   const actions: Array<{ message: string; created_at: string;}> = []
 
   const pushActions = actionsJson.filter((action) => action.type === "PushEvent");
-  console.log(pushActions)
   pushActions.forEach(action => {
     action.payload.commits.forEach((commit: { message: string }) => {
       const newAction = { message: commit.message, created_at: action.created_at }
@@ -51,7 +50,13 @@ const GitPage = (): JSX.Element => {
   
 
   return (
-    <GitActionsTable actions={gitData.actions} userName={gitData.userName} src={gitData.src}  />
+    <Box>
+      <GitActionsTable
+        actions={gitData.actions}
+        userName={gitData.userName}
+        src={gitData.src} />
+      
+    </Box>
   )
 }
 

@@ -1,6 +1,4 @@
-
-import { Avatar } from "@nextui-org/react/types/avatar/avatar";
-
+import { Avatar, Box } from '@mui/material';
 import React from 'react'
 type Props = {
   userName: string;
@@ -10,8 +8,10 @@ type Props = {
 const GitUserProfile = ({userName,src}:Props):JSX.Element => {
   return (
     <>
-      <Avatar src={src} alt={userName} />
-      <span>{userName}</span>
+      <Box sx={{display:"flex",alignItems:"center",gap:"10px"}}>
+        <Avatar src={src} alt={userName} />
+        <span>{userName}</span>
+      </Box>
     </>
   )
 }

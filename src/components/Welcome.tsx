@@ -16,6 +16,8 @@ const Welcome = ():JSX.Element => {
         <li><Link to={"notification"}>useReducerを学んだ時のやつ</Link></li>
         <li><Link to={"form"}>rhfのテスト</Link></li>
         <li><Link to={"form_with_original_component"}>rhfとMUIや自作コンポーネントの連携</Link></li>
+        <li><Link to={"git"}>git apiからプロフィールとコミットを取得して表示</Link></li>  
+        
       </ul>
     </div>
   )

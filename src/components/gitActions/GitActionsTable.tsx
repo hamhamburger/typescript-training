@@ -1,7 +1,7 @@
 import React from 'react'
 import GitUserProfile from "./GitUserProfile"
 import {Action} from "./types"
-
+import { Box } from '@mui/material'
 
 type Props = {
   actions: Action[];
@@ -9,9 +9,21 @@ type Props = {
   userName: string;
 }
 
-const GitActionsTable = ({actions,src,userName}:Props):JSX.Element => {
+const GitActionsTable = ({ actions, src, userName }: Props): JSX.Element => {
   return (
-    <GitUserProfile userName={userName} src={src} />
+    <Box>
+      <GitUserProfile userName={userName} src={src} />
+      {actions.map((action) => {
+        return (
+          <Box key={action.message}>
+            <span>{action.message}</span>
+            <span>{action.created_at}</span>
+          </Box>
+        )
+
+      }
+      )}
+    </Box>
   )
 }
 

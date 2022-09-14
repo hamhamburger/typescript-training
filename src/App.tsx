@@ -7,6 +7,7 @@ import NotificationUseReducerPage from './components/useReducer/NotificationUseR
 import Welcome from './components/Welcome';
 import FormPage from './components/reactHooks/FormPage';
 import FormWithOriginalComponentPage from './components/reactHooksWithOriginalComponent/FormWithOriginalComponentPage';
+import GitPage from './components/gitActions/GitPage';
 
 const App:FC = () => {
 
@@ -20,6 +21,7 @@ const App:FC = () => {
         <Route path="/form" element={<FormPage />} />
         <Route path="/form_component" element={<FormPage />} />
         <Route path="/form_with_original_component" element={<FormWithOriginalComponentPage />} />
+        <Route path="/git" element={<GitPage />} />
       </Routes>
     </BrowserRouter>
   );
