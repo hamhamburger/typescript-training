@@ -1,17 +1,16 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
-import React,{useState,useRef} from 'react'
-import { useForm, SubmitHandler, SubmitErrorHandler } from 'react-hook-form'
-import { MyTextArea } from './MyTextArea'
-import SingleForm from './SingleForm'
 
+import SingleForm from './SingleForm'
+import FormWithOriginalComponent from './FormWithOriginalComponent'
 
 
 const FormWithOriginalComponentPage = ():JSX.Element => {
   
   return (
     <div>
+      <p>MUIコンポーネント</p>
       <SingleForm />
-
+      <p>オリジナルコンポーネント</p>
+      <FormWithOriginalComponent />
     </div>
   )
 

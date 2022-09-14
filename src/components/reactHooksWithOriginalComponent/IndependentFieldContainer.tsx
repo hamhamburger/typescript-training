@@ -1,6 +1,6 @@
 import { Controller, Control } from "react-hook-form";
-import { TextField } from "@mui/material";
-import React from 'react';
+import { MyTextArea } from './MyTextArea';
+
 
 
 type FormInput = {
@@ -13,20 +13,19 @@ type Props = {
   control: Control<FormInput>
 }
 
-const FruitNameField = ({ control }: Props): JSX.Element => {
+const IndependentFieldContainer = ({ control }: Props): JSX.Element => {
  return (
     <Controller 
       control={control}
       name="name"
       defaultValue={""}
       rules={{ required: { value: true, message: "入力必須です" } }}
-      render={({ field, fieldState: { error } }) =>
-        (
-        <TextField
+     render={({ field, fieldState: { error } }) =>
+        // const {onChange} = field
+       (
+        <MyTextArea
           {...field}
-          label="品種名"
           error={(error?.message !== null)}
-          helperText={error?.message}
          />
         )
       
@@ -37,4 +36,4 @@ const FruitNameField = ({ control }: Props): JSX.Element => {
 
 }
 
-export default FruitNameField
+export default IndependentFieldContainer

@@ -18,7 +18,8 @@ const App:FC = () => {
         <Route path="/counter" element={<Counter />} />
         <Route path="/notification" element={<NotificationUseReducerPage />} />
         <Route path="/form" element={<FormPage />} />
-        <Route path="/form_component" element={<FormWithOriginalComponentPage />} />
+        <Route path="/form_component" element={<FormPage />} />
+        <Route path="/form_with_original_component" element={<FormWithOriginalComponentPage />} />
       </Routes>
     </BrowserRouter>
   );
