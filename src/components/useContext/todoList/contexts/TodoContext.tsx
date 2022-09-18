@@ -1,4 +1,3 @@
-import { jsx } from "@emotion/react";
 import { Children, createContext,Dispatch ,ReactNode, useReducer ,useContext} from "react";
 
 
@@ -16,10 +15,11 @@ const TodoStateContext = createContext<TodoState | undefined>(undefined)
 type Action = 
 | {type: 'CREATE'; text:string}
 | {type: "TOGGLE"; id: number}
-| {type: 'REMOVE'; id:number};
+| {type: 'REMOVE'; id:number}
+| {type: 'YASUMIFY'; id:number}
 
 
-type TodoDispatch = Dispatch<Action>
+type TodosDispatch = Dispatch<Action>
 
 const TodoDispatchContext = createContext<TodosDispatch | undefined>(undefined)
 
@@ -43,6 +43,11 @@ const todosReducer = (state: TodoState,action: Action):TodoState => {
     }
     case "REMOVE":{
       return state.filter(todo => todo.id !== action.id)
+    }
+
+    case "YASUMIFY":{
+      return state.map(todo => todo.id === action.id ?
+         {...todo,text:"休む！"} : todo)
     }
 
     default:
@@ -73,13 +78,13 @@ return (
 
 export default TodosContextProvider
 
-export const useTodosState = () => {
+export const useTodosState = (): Todo[] => {
   const state = useContext(TodoStateContext)
-  if(!state) throw new Error('TodosProvider not found')
+  if(state == null) throw new Error('TodosProvider not found')
   return state
 }
 
-export const useTodosDispatch = () => {
+export const useTodosDispatch = ():TodosDispatch => {
   const dispatch = useContext(TodoDispatchContext)
   if(dispatch === undefined) throw new Error('TodoProviderNotFound')
   return dispatch

@@ -2,9 +2,7 @@ import { useState, FormEvent } from 'react';
 import { useTodosDispatch } from '../TodoContext';
 
 
-import React from 'react'
-
-const TodoForm = () => {
+const TodoForm = ():JSX.Element => {
   const [value, setValue] = useState<string>("")
   const dispatch = useTodosDispatch()
 

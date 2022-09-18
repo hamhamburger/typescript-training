@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import TodoItem from './TodoItem';
 import { Todo, useTodosState } from '../TodoContext'
-import { useContext } from 'react';
+
 
 
 
 const TodoList = ():JSX.Element => {
   const todos = useTodosState()
+
   return (
 
     <div>

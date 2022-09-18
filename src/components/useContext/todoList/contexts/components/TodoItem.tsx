@@ -15,10 +15,14 @@ const TodoItem = ({todo}:Props):JSX.Element => {
   const onRemove = ():void => {
     dispatch({type:"REMOVE",id:todo.id})
   }
+
+  const onYasumify = ():void => {
+    dispatch({type:"YASUMIFY",id:todo.id})
+  }
   return (
     <li>
       <span>{todo.done ? "✔" : "❐"}</span>
-      <span onClick={onToggle}>{todo.text}</span>
+      <span onClick={onToggle} onDoubleClick={onYasumify}>{todo.text}</span>
       <span onClick={onRemove}>(X)</span>
     </li>
   )
