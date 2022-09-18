@@ -13,6 +13,7 @@ import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import ContextMain from './components/useContext/profile/ContextMain';
 import ContextCounter from './components/useContext/counter/Counter';
+import ContextTodoMain from './components/useContext/todoList/contexts/components/Main';
 
 const App:FC = () => {
 
@@ -30,6 +31,7 @@ const App:FC = () => {
         <Route path="/redux_counter" element={<ReduxCounter />} />
         <Route path="/context" element={<ContextMain />} />
         <Route path="/context_counter" element={<ContextCounter />} />
+        <Route path="/context_todo" element={<ContextTodoMain />} />
       </Routes>
     </BrowserRouter>
   );
