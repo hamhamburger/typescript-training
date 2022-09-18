@@ -11,25 +11,27 @@ import GitPage from './components/gitActions/GitPage';
 import ReduxCounter from './components/redux/Counter';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
+import ContextMain from './components/useContext/profile/ContextMain';
+import ContextCounter from './components/useContext/counter/BadCounter';
 
 const App:FC = () => {
 
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="*" element={<Welcome />} />
-          <Route path="/task" element={<TaskPage />} />
-          <Route path="/counter" element={<Counter />} />
-          <Route path="/notification" element={<NotificationUseReducerPage />} />
-          <Route path="/form" element={<FormPage />} />
-          <Route path="/form_component" element={<FormPage />} />
-          <Route path="/form_with_original_component" element={<FormWithOriginalComponentPage />} />
-          <Route path="/git" element={<GitPage />} />
-          <Route path="/redux_counter" element={<ReduxCounter />} />
-        </Routes>
-      </BrowserRouter>
-    </Provider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<Welcome />} />
+        <Route path="/task" element={<TaskPage />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/notification" element={<NotificationUseReducerPage />} />
+        <Route path="/form" element={<FormPage />} />
+        <Route path="/form_component" element={<FormPage />} />
+        <Route path="/form_with_original_component" element={<FormWithOriginalComponentPage />} />
+        <Route path="/git" element={<GitPage />} />
+        <Route path="/redux_counter" element={<ReduxCounter />} />
+        <Route path="/context" element={<ContextMain />} />
+        <Route path="/context_counter" element={<ContextCounter />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
