@@ -1,6 +1,6 @@
 
 
-import React from 'react'
+
 import { Todo, useTodosDispatch } from '../TodoContext'
 
 type Props = {

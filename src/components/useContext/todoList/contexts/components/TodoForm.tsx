@@ -8,6 +8,10 @@ const TodoForm = ():JSX.Element => {
 
   const onSubmit = (e: FormEvent):void => {
     e.preventDefault();
+    if(value === "") {
+      alert("空です")
+      return 
+    }
     dispatch({
       type: 'CREATE',
       text: value
