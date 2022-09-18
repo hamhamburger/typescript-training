@@ -12,7 +12,7 @@ import ReduxCounter from './components/redux/Counter';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import ContextMain from './components/useContext/profile/ContextMain';
-import ContextCounter from './components/useContext/counter/BadCounter';
+import ContextCounter from './components/useContext/counter/Counter';
 
 const App:FC = () => {
 
