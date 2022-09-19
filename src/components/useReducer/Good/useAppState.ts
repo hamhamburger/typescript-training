@@ -1,6 +1,6 @@
 
-import { useContext } from 'react';
-import { createContext } from 'react';            
+import { createContext,useContext } from 'react';
+
 
 
 export type AppState = {
@@ -16,9 +16,9 @@ export type AppState = {
 
   export const appStateContext = createContext<AppState | null>(null)
 
-  export const useAppState = () => {
+  export const useAppState = ():AppState => {
     const appState = useContext(appStateContext)
-    if(appState === undefined){
+    if(appState === null){
       throw new Error("Providerで囲んで下さい")
     }
 
