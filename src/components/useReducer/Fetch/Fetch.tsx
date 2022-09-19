@@ -32,7 +32,6 @@ const Fetch = ():JSX.Element => {
       }
     }
   }
-
   const [{loading,users}, dispatch] = useReducer(reducer,{loading:false,users:[]})
   
 

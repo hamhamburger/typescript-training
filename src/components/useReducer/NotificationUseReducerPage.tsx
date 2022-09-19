@@ -13,7 +13,6 @@ const NotificationUseStatePage = ():JSX.Element => {
 
 
 
-
   return (
     <div>
       {notifications.map((notification,index) => {
