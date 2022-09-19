@@ -13,7 +13,7 @@ export const dispatchContext  = createContext<React.Dispatch<AppAction> | null>(
   null
 )
 
-export const useDispatch = ():React.Dispatch<AppAction> => {
+export const useAppStateDispatch = ():React.Dispatch<AppAction> => {
   const dispatch = useContext(dispatchContext)
   if(dispatch == null){
     throw new Error("囲んで下さい")

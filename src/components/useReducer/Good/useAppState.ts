@@ -8,7 +8,7 @@ export type AppState = {
       {
         id: string
         likes:number
-        content: string      
+        contents: string      
       }
     >
   }
