@@ -1,18 +1,14 @@
 import  { useState,useCallback,memo } from 'react';
 const Main = ():JSX.Element => {
   const [state,setState] = useState<number>(0)
-  useCallback(
-    () => {
-      console.log('useCallback')
-      return state * 2
-    },
-    [state],
-  )
-
 
   const add = useCallback(():void => {
     setState(state + 1)
   },[state,setState])
+
+  const decrement = ():void => {
+    setState(state - 1)
+  }
   
 
   console.log("main rendered")
@@ -20,8 +16,9 @@ const Main = ():JSX.Element => {
 
     <div>
       <Header />
-      <div>{}</div>
+      <div>{state}</div>
       <Button onClick={add}>add</Button>
+      <Button onClick={decrement}>decrement</Button>
     </div>
   )
 }
