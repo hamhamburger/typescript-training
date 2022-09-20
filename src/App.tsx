@@ -5,7 +5,7 @@ import { TaskPage } from './components/taskList/TaskPage';
 import Counter from './components/useReducer/Counter';
 import NotificationUseReducerPage from './components/useReducer/NotificationUseReducerPage';
 import Welcome from './components/Welcome';
-import FormPage from './components/reactHooks/FormPage';
+import FormPage from './components/reactHooksForm/FormPage';
 import FormWithOriginalComponentPage from './components/reactHooksWithOriginalComponent/FormWithOriginalComponentPage';
 import GitPage from './components/gitActions/GitPage';
 import ReduxCounter from './components/redux/Counter';
