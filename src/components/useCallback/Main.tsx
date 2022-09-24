@@ -3,11 +3,11 @@ const Main = ():JSX.Element => {
   const [state,setState] = useState<number>(0)
 
   const add = useCallback(():void => {
-    setState(state + 1)
-  },[state,setState])
+    setState((prev) => prev + 1)
+  },[setState])
 
   const decrement = ():void => {
-    setState(state - 1)
+    setState((prev) => prev - 1)
   }
   
 
