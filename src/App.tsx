@@ -14,6 +14,7 @@ import { Provider } from 'react-redux';
 import ContextMain from './components/useContext/profile/ContextMain';
 import ContextCounter from './components/useContext/counter/Counter';
 import ContextTodoMain from './components/useContext/todoList/contexts/components/Main';
+import TestPage from './components/test/TestPage';
 
 const App:FC = () => {
 
@@ -21,6 +22,7 @@ const App:FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path="*" element={<Welcome />} />
+        <Route path="/test" element={<TestPage />} />
         <Route path="/task" element={<TaskPage />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/notification" element={<NotificationUseReducerPage />} />
