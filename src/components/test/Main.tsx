@@ -1,4 +1,4 @@
-import { Grid, Box, Paper, Select, Typography } from '@mui/material';
+import { Grid, Box, Paper, Select, Typography, Button } from '@mui/material';
 import BasicSelect from './BasicSelect';
 
 const Item = ({children}:{children:JSX.Element | string}):JSX.Element => {
@@ -12,7 +12,7 @@ const Main = ():JSX.Element => {
   
   return (
     <Box>
-      <Grid container columnGap={2} rowGap={3}>
+      <Grid container  columnGap={2} rowGap={3}>
         <Grid item xs={3}>
           <BasicSelect />
           <BasicSelect />
@@ -44,11 +44,11 @@ const Main = ():JSX.Element => {
         border:"3px solid black"
       }}
       >
-        <Grid container spacing={2} >
+        <Grid container >
           <Grid item>
             <Box sx={{width:"128px",height:"128px",backgroundColor:"black"}}>w</Box>
           </Grid>
-          <Grid item xs={12} sm container>
+          <Grid item xs={12} sm container sx={{margin:"10px"}}>
             <Grid item xs={12} container direction="column">
               <Typography variant='subtitle1' component="div">
                 License
@@ -60,19 +60,7 @@ const Main = ():JSX.Element => {
                 ID: 1030114
               </Typography>
             </Grid>
-            <Grid item>
-              <Grid container gap={1}>
-                <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                  Remove
-                </Typography>
-                <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                  Edit
-                </Typography>
-                <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                  Save
-                </Typography>
-              </Grid>
-            </Grid>
+            
           </Grid>
           <Grid item sx={{margin:"10px"}}>
             <Typography variant="subtitle1" component="div">
@@ -80,7 +68,19 @@ const Main = ():JSX.Element => {
             </Typography>
 
           </Grid>
-
+          <Grid item xs={12} sx={{border:"2px solid gray"}}>
+              <Grid container columnGap={1} justifyContent="center">
+                <Button sx={{ cursor: 'pointer' }}>
+                  Remove
+                </Button>
+                <Button sx={{ cursor: 'pointer' }}>
+                  Edit
+                </Button>
+                <Button sx={{ cursor: 'pointer' }}>
+                  Save
+                </Button>
+              </Grid>
+            </Grid>
         </Grid>
       </Paper>
     </Box>
